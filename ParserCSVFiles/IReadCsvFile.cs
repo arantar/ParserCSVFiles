@@ -2,6 +2,7 @@
 
 namespace ParserCSVFiles
 {
+    // Интерфейс для реализации DI паттерна (Constructor Injection)
     public interface IReadCsvFile
     {
         List<string> RawInputCsvList { get; set; }

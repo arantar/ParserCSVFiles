@@ -13,10 +13,11 @@ namespace ParserCSVFiles
                 SortedParsedCsvList = ParsedCsvList.SortParsedCsvList(int.Parse(CommandLineArgsParser.SortOption));
             }
         }
-        // Переменная, содержащая в себе ссылку на объект ReadCsvFile
+        // Переменная, содержащая в себе ссылку на объект ReadCsvFile, для реализации DI
         private readonly IReadCsvFile _readFile;
         // Список, содержащий нераспарсенные строки из CSV файла
         private readonly List<string> _rawInputList;
+        // Список, содержащий номера строк в файле CSV с возможными проблемами оформления
         public List<int> ProblemLinesCsvList { get; private set; }
         // Список, содержащий распарсенные строки CSV файла
         public List<List<string>> ParsedCsvList { get; private set; }
@@ -25,7 +26,7 @@ namespace ParserCSVFiles
 
         /*
            Основной метод для парсинга. Его работа основывается на подсчете количества кавычек в строке
-           и определения наличия разделителя, также он выявляет возможные проблемы в оформлении CSV строки
+           и определении наличия разделителя, также он выявляет возможные проблемы в оформлении CSV строки
         */
         public List<List<string>> ParseCsvList(char separator) {
             List<List<string>> parsedCsvList = new List<List<string>>();

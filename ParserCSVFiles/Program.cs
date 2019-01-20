@@ -6,7 +6,8 @@ namespace ParserCSVFiles
     class Program
     {
         public static void Main(string[] args) {
-            /* Вызываем метод для обработки аргументов командной строки.
+            /*
+               Вызываем метод для обработки аргументов командной строки.
                Гарантируем при этом, что введенные данные валидные: файл 
                для распарсивания существует и имеет расширение *.csv, а
                параметры сортировки - это натуральное число
@@ -33,13 +34,16 @@ namespace ParserCSVFiles
         public static void ShowParsedCsvList(List<List<string>> list) {
             int index = 0;
             foreach (var i in list) {
-                Console.Write(++index + ".  ");
+                Console.Write(++index + ".");
                 foreach (var j in i) {
-                    Console.Write(j);
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write(" | ");
                     Console.ResetColor();
+                    Console.Write(j);
                 }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(" |");
+                Console.ResetColor();
                 Console.WriteLine();
             }
             Console.WriteLine("\r\nНажмите Enter для завершения программы.");

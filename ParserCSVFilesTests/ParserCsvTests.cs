@@ -99,6 +99,21 @@ namespace ParserCSVFilesTests
             AreEqual(expectedData, parserCsv.ParsedCsvList);
         }
 
+
+        [TestMethod]
+        public void ParseCsvList_QuoteCharTest4() {
+            var testData = new List<string>() { "\"\"a\",\"b\"\"" };
+            var expectedData = new List<List<string>>()
+            {
+                new List<string>() { "\"a\",\"b\"" },
+            };
+            var readerCsv = new StubIReadCsvFile() {
+                RawInputCsvListGet = () => testData
+            };
+            var parserCsv = new ParserCsv(readerCsv);
+            AreEqual(expectedData, parserCsv.ParsedCsvList);
+        }
+
         [TestMethod]
         public void ParseCsvList_SingleLineTest() {
             var testData = new List<string>() { "a, b, c" };
