@@ -20,7 +20,7 @@ namespace ParserCSVFiles
             set => _sortOption = ValidateArgSortOption(value, out Match match) ? match.Groups["sort_line"].Value : null;
         }
 
-        // метод, который определяет количество аргументов переданный командной строке и присваивает их соответствующему полю
+        // Метод, который определяет количество аргументов переданных командной строке и присваивает их соответствующему полю
         public static void ParseArgs(string[] args) {
             switch (args.Length) {
                 case 0:
@@ -39,32 +39,31 @@ namespace ParserCSVFiles
             }
         }
 
-        // метод для валидации пути к файлу CSV, на основе регулярного выражения
+        // Метод для валидации пути к файлу CSV на основе регулярного выражения
         private static bool ValidateArgPathFile(string path, out Match match) {
             match = Regex.Match(path, @"(?<=\/(?i)in=)(?<path>.{3,})");
-            // проверка на то, правильно ли был передан параметр пути к файлу
+            // Проверка на то, правильно ли был передан параметр пути к файлу
             if (!match.Success) {
                 return ShowTypeError("Введено неверное имя параметра. Необходимо /in=\"[путь к файлу]\"");
             }
-            // проверяем существует ли файл
+            // Проверяем существует ли файл
             if (!File.Exists(match.Groups["path"].Value)) {
                 return ShowTypeError("Файла не существует. Проверьте набранный путь к файлу.");
             }
-            // проверяем совпадает ли расширение файла с форматом CSV
+            // Проверяем совпадает ли расширение файла с форматом CSV
             if (!string.Equals(Path.GetExtension(match.Groups["path"].Value), ".csv")) {
                 return ShowTypeError("Файл имеет неверный формат!");
             }
             return true;
         }
-        // метод для валидации параметра сортировки на основе регулярного выражения
+
+        // Метод для валидации параметра сортировки на основе регулярного выражения
         private static bool ValidateArgSortOption(string sortOption, out Match match) {
             match = Regex.Match(sortOption, @"(?<=\/(?i)sort=)(?<sort_line>\d+$)");
             if (!match.Success) {
-                return ShowTypeError("Введено неверное имя параметра. Необходимо /sort=[число]");
+                return ShowTypeError("Введено неверное имя параметра. Необходимо /sort=[натуральное число] \r\nСортировка не будет выполнена.");
             }
-            else {
-                return true;
-            }
+            return true;
         }
 
         private static bool ShowTypeError(string typeError) {

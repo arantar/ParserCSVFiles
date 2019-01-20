@@ -5,7 +5,6 @@ namespace ParserCSVFiles
 {
     public class ParserCsv
     {
-        // конструктор, где производятся все манипуляции при создании объекта ParseCsv
         public ParserCsv(IReadCsvFile readFile) {
             _readFile = readFile;
             _rawInputList = _readFile.RawInputCsvList;
@@ -14,18 +13,19 @@ namespace ParserCSVFiles
                 SortedParsedCsvList = ParsedCsvList.SortParsedCsvList(int.Parse(CommandLineArgsParser.SortOption));
             }
         }
-
+        // Переменная, содержащая в себе ссылку на объект ReadCsvFile
         private readonly IReadCsvFile _readFile;
-        // список, содержащий нераспарсенные строки из CSV файла
+        // Список, содержащий нераспарсенные строки из CSV файла
         private readonly List<string> _rawInputList;
         public List<int> ProblemLinesCsvList { get; private set; }
-        // список, содержащий распарсенные строки CSV файла
+        // Список, содержащий распарсенные строки CSV файла
         public List<List<string>> ParsedCsvList { get; private set; }
-        // список, содержащий распарсенный и отсортированный строки CSV файла
+        // Список, содержащий распарсенный и отсортированный строки CSV файла
         public List<List<string>> SortedParsedCsvList { get; private set; }
 
-        /* основной метод для парсинга. Его работа основывается на подсчете количества кавычек в строке, а также он
-           выявляет возможные проблемы в оформлении CSV строки
+        /*
+           Основной метод для парсинга. Его работа основывается на подсчете количества кавычек в строке
+           и определения наличия разделителя, также он выявляет возможные проблемы в оформлении CSV строки
         */
         public List<List<string>> ParseCsvList(char separator) {
             List<List<string>> parsedCsvList = new List<List<string>>();
@@ -57,7 +57,7 @@ namespace ParserCSVFiles
             return parsedCsvList;
         }
 
-        // вспомогательный метод для метода ParseCsvList, который удаляет лишние кавычки в зависимости от того, где они находятся
+        // Вспомогательный метод для метода ParseCsvList, который удаляет лишние кавычки в зависимости от того, где они находятся
         private string TrimQuotes(string line) {
             if (string.IsNullOrEmpty(line)) {
                 return line;
@@ -70,7 +70,7 @@ namespace ParserCSVFiles
             }
         }
 
-        // метод для вывода на экран списка строк из файла CSV, которые могут содержать ошибки оформления, например лишние или недостающие кавычки
+        // Метод для вывода на экран списка строк из файла CSV, которые могут содержать ошибки оформления, например лишние или недостающие кавычки
         public void ShowProblemLinesInCsvList(List<int> problemLinesList) {
             if (problemLinesList.Count == 0) {
                 return;

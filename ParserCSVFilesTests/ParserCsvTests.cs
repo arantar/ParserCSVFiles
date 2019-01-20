@@ -76,7 +76,7 @@ namespace ParserCSVFilesTests
             var testData = new List<string>() { "a\"" };
             var expectedData = new List<List<string>>()
             {
-                new List<string>() { "a\"" },
+                new List<string>() { "a" },
             };
             var readerCsv = new StubIReadCsvFile() {
                 RawInputCsvListGet = () => testData

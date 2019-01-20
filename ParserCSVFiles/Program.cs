@@ -13,20 +13,23 @@ namespace ParserCSVFiles
             */
             CommandLineArgsParser.ParseArgs(args);
             if (CommandLineArgsParser.PathFile == null) {
-                Console.WriteLine("Нажмите Enter для завершения программы.");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Проверьте правильность введенных параметров. Нажмите Enter и попробуйте снова.");
+                Console.ResetColor();
                 Console.ReadKey();
                 Environment.Exit(0);
             }
-            // создаем объект типа ParserCsv, в результате чего в нем уже будет содержаться распарсенный CSV файл в виде списка
+            // Создаем объект типа ParserCsv, в результате чего в нем будет содержаться распарсенный CSV файл в виде списка
             ParserCsv parserCsv = new ParserCsv(new ReadCsvFile(CommandLineArgsParser.PathFile));
+            // Выводим на экран строки в CSV файле, которые могут содержать ошибку в оформлении
             parserCsv.ShowProblemLinesInCsvList(parserCsv.ProblemLinesCsvList);
-            // обращается к тому ли иному свойству в зависимости от того, указан ли у нас параметр сортировки
+            // Обращается к тому ли иному полю в зависимости от того, указан ли у нас параметр сортировки
             ShowParsedCsvList(CommandLineArgsParser.SortOption == null
                 ? parserCsv.ParsedCsvList
                 : parserCsv.SortedParsedCsvList);
         }
 
-        // метод для вывода на экран распарсенного (отсортированного) CSV файла
+        // Метод для вывода на экран распарсенного (отсортированного) CSV файла
         public static void ShowParsedCsvList(List<List<string>> list) {
             int index = 0;
             foreach (var i in list) {
