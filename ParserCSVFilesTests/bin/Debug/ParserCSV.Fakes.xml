@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ParserCSV.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:ParserCSV.Fakes.ShimCommandLineArgsParser">
+            <summary>Тип оболочки совместимости для ParserCSV.CommandLineArgsParser</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimCommandLineArgsParser.#ctor">
+            <summary>Инициализация нового экземпляра оболочки совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimCommandLineArgsParser.BehaveAsCurrent">
+            <summary>Назначение поведения &quot;Current&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimCommandLineArgsParser.BehaveAsNotImplemented">
+            <summary>Назначение поведения &quot;NotImplemented&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.Behavior">
+            <summary>Назначение поведения всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.ParseArgsStringArray">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.ParseArgs(String[] args)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.PathFileGet">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.get_PathFile()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.PathFileSetString">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.set_PathFile(String value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.SortOptionGet">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.get_SortOption()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.SortOptionSetString">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.set_SortOption(String value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.TypeErrorString">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.TypeError(String typeError)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.ValidateArgPathFileStringMatchOut">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.ValidateArgPathFile(String path, Match&amp; match)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimCommandLineArgsParser.ValidateArgSortOptionStringMatchOut">
+            <summary>Задает оболочка совместимости CommandLineArgsParser.ValidateArgSortOption(String sortOption, Match&amp; match)</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.ShimEnumerableForCsv">
+            <summary>Тип оболочки совместимости для ParserCSV.EnumerableForCsv</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimEnumerableForCsv.#ctor">
+            <summary>Инициализация нового экземпляра оболочки совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimEnumerableForCsv.BehaveAsCurrent">
+            <summary>Назначение поведения &quot;Current&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimEnumerableForCsv.BehaveAsNotImplemented">
+            <summary>Назначение поведения &quot;NotImplemented&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimEnumerableForCsv.Behavior">
+            <summary>Назначение поведения всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimEnumerableForCsv.RandomOrDefaultOf1IEnumerableOfM0Int32``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Collections.Generic.IEnumerable{``0},System.Int32,``0})">
+            <summary>Задает оболочка совместимости EnumerableForCsv.RandomOrDefault(IEnumerable`1&lt;!!0&gt; source, Int32 sortingColumnIndex)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimEnumerableForCsv.SortParsedCsvListListOfListOfStringInt32">
+            <summary>Задает оболочка совместимости EnumerableForCsv.SortParsedCsvList(List`1&lt;List`1&lt;String&gt;&gt; parsedCsvList, Int32 index)</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.ShimParserCsv">
+            <summary>Тип оболочки совместимости для ParserCSV.ParserCsv</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimParserCsv.#ctor">
+            <summary>Инициализация нового экземпляра оболочки совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimParserCsv.#ctor(ParserCSV.ParserCsv)">
+            <summary>Инициализация новой оболочки совместимости для заданного экземпляра</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.ShimParserCsv.AllInstances">
+            <summary>Определение оболочек совместимости для всех членов экземпляров</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.ParseCsvListChar">
+            <summary>Задает оболочка совместимости ParserCsv.ParseCsvList(Char separator)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.ParsedCsvListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_ParsedCsvList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.ParsedCsvListSetListOfListOfString">
+            <summary>Задает оболочка совместимости ParserCsv.set_ParsedCsvList(List`1&lt;List`1&lt;String&gt;&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.ProblemLinesListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_ProblemLinesList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.ProblemLinesListSetListOfInt32">
+            <summary>Задает оболочка совместимости ParserCsv.set_ProblemLinesList(List`1&lt;Int32&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.RawInputListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_RawInputList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.RawInputListSetListOfString">
+            <summary>Задает оболочка совместимости ParserCsv.set_RawInputList(List`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.SortedParsedCsvListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_SortedParsedCsvList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.SortedParsedCsvListSetListOfListOfString">
+            <summary>Задает оболочка совместимости ParserCsv.set_SortedParsedCsvList(List`1&lt;List`1&lt;String&gt;&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.TrimQuotesString">
+            <summary>Задает оболочка совместимости ParserCsv.TrimQuotes(String text)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances.ViewProblemLinesListListOfInt32">
+            <summary>Задает оболочка совместимости ParserCsv.ViewProblemLinesList(List`1&lt;Int32&gt; problemLinesList)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.AllInstances._readFileGet">
+            <summary>Задает оболочка совместимости ParserCsv.get__readFile()</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimParserCsv.BehaveAsCurrent">
+            <summary>Назначение поведения &quot;Current&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimParserCsv.BehaveAsNotImplemented">
+            <summary>Назначение поведения &quot;NotImplemented&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.Behavior">
+            <summary>Назначение поведения всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.ConstructorIReadCsvFile">
+            <summary>Задает оболочка совместимости ParserCsv.ParserCsv(IReadCsvFile readFile)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.ParseCsvListChar">
+            <summary>Задает оболочка совместимости ParserCsv.ParseCsvList(Char separator)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.ParsedCsvListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_ParsedCsvList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.ParsedCsvListSetListOfListOfString">
+            <summary>Задает оболочка совместимости ParserCsv.set_ParsedCsvList(List`1&lt;List`1&lt;String&gt;&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.ProblemLinesListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_ProblemLinesList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.ProblemLinesListSetListOfInt32">
+            <summary>Задает оболочка совместимости ParserCsv.set_ProblemLinesList(List`1&lt;Int32&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.RawInputListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_RawInputList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.RawInputListSetListOfString">
+            <summary>Задает оболочка совместимости ParserCsv.set_RawInputList(List`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.SortedParsedCsvListGet">
+            <summary>Задает оболочка совместимости ParserCsv.get_SortedParsedCsvList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.SortedParsedCsvListSetListOfListOfString">
+            <summary>Задает оболочка совместимости ParserCsv.set_SortedParsedCsvList(List`1&lt;List`1&lt;String&gt;&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.TrimQuotesString">
+            <summary>Задает оболочка совместимости ParserCsv.TrimQuotes(String text)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv.ViewProblemLinesListListOfInt32">
+            <summary>Задает оболочка совместимости ParserCsv.ViewProblemLinesList(List`1&lt;Int32&gt; problemLinesList)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimParserCsv._readFileGet">
+            <summary>Задает оболочка совместимости ParserCsv.get__readFile()</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.ShimReadCsvFile">
+            <summary>Тип оболочки совместимости для ParserCSV.ReadCsvFile</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimReadCsvFile.#ctor">
+            <summary>Инициализация нового экземпляра оболочки совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimReadCsvFile.#ctor(ParserCSV.ReadCsvFile)">
+            <summary>Инициализация новой оболочки совместимости для заданного экземпляра</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.ShimReadCsvFile.AllInstances">
+            <summary>Определение оболочек совместимости для всех членов экземпляров</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.AllInstances.RawInputListGet">
+            <summary>Задает оболочка совместимости ReadCsvFile.get_RawInputList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.AllInstances.RawInputListSetListOfString">
+            <summary>Задает оболочка совместимости ReadCsvFile.set_RawInputList(List`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.AllInstances.ReadCsvString">
+            <summary>Задает оболочка совместимости ReadCsvFile.ReadCsv(String path)</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimReadCsvFile.BehaveAsCurrent">
+            <summary>Назначение поведения &quot;Current&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimReadCsvFile.BehaveAsNotImplemented">
+            <summary>Назначение поведения &quot;NotImplemented&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.Behavior">
+            <summary>Назначение поведения всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.ShimReadCsvFile.Bind(ParserCSV.IReadCsvFile)">
+            <summary>Привязка членов интерфейса к оболочке совместимости.</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.ConstructorString">
+            <summary>Задает оболочка совместимости ReadCsvFile.ReadCsvFile(String path)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.RawInputListGet">
+            <summary>Задает оболочка совместимости ReadCsvFile.get_RawInputList()</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.RawInputListSetListOfString">
+            <summary>Задает оболочка совместимости ReadCsvFile.set_RawInputList(List`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.ShimReadCsvFile.ReadCsvString">
+            <summary>Задает оболочка совместимости ReadCsvFile.ReadCsv(String path)</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.StubIReadCsvFile">
+            <summary>Тип заглушки ParserCSV.IReadCsvFile</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.StubIReadCsvFile.#ctor">
+            <summary>Инициализирует новый экземпляр type StubIReadCsvFile</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.StubIReadCsvFile.AttachBackingFieldToRawInputList">
+            <summary>Присоединение делегатов для эмуляции StubIReadCsvFile.RawInputList как свойства с резервным полем.</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.StubIReadCsvFile.ParserCSV#IReadCsvFile#ReadCsv(System.String)">
+            <summary>Задает заглушка IReadCsvFile.ReadCsv(String path)</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.StubIReadCsvFile.ParserCSV#IReadCsvFile#RawInputList">
+            <summary>Задает stub IReadCsvFile.get_RawInputList()</summary>
+        </member>
+        <member name="F:ParserCSV.Fakes.StubIReadCsvFile.RawInputListGet">
+            <summary>Задает stub IReadCsvFile.get_RawInputList()</summary>
+        </member>
+        <member name="F:ParserCSV.Fakes.StubIReadCsvFile.RawInputListSetListOfString">
+            <summary>Задает stub IReadCsvFile.set_RawInputList(List`1&lt;String&gt; value)</summary>
+        </member>
+        <member name="F:ParserCSV.Fakes.StubIReadCsvFile.ReadCsvString">
+            <summary>Задает stub IReadCsvFile.ReadCsv(String path)</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.StubParserCsv">
+            <summary>Тип заглушки ParserCSV.ParserCsv</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.StubParserCsv.#ctor(ParserCSV.IReadCsvFile)">
+            <summary>Инициализирует новый экземпляр</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.StubParserCsv.CallBase">
+            <summary>Получает или задает значение, указывающее, следует ли вызывать базовый метод вместо резервного поведения</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.StubParserCsv.InitializeStub">
+            <summary>Инициализирует новый экземпляр type StubParserCsv</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.StubParserCsv.InstanceBehavior">
+            <summary>Получает или задает поведение экземпляра.</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.StubParserCsv.InstanceObserver">
+            <summary>Получает или задает наблюдатель экземпляра.</summary>
+        </member>
+        <member name="T:ParserCSV.Fakes.StubReadCsvFile">
+            <summary>Тип заглушки ParserCSV.ReadCsvFile</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.StubReadCsvFile.#ctor(System.String)">
+            <summary>Инициализирует новый экземпляр</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.StubReadCsvFile.CallBase">
+            <summary>Получает или задает значение, указывающее, следует ли вызывать базовый метод вместо резервного поведения</summary>
+        </member>
+        <member name="M:ParserCSV.Fakes.StubReadCsvFile.InitializeStub">
+            <summary>Инициализирует новый экземпляр type StubReadCsvFile</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.StubReadCsvFile.InstanceBehavior">
+            <summary>Получает или задает поведение экземпляра.</summary>
+        </member>
+        <member name="P:ParserCSV.Fakes.StubReadCsvFile.InstanceObserver">
+            <summary>Получает или задает наблюдатель экземпляра.</summary>
+        </member>
+    </members>
+</doc>

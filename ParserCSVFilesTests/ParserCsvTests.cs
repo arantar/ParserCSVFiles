@@ -31,10 +31,10 @@ namespace ParserCSVFilesTests
 
         [TestMethod]
         public void ParseCsvList_EmptyLineTest() {
-            var testData = new List<string>() { "\r\n" };
+            var testData = new List<string>() { "a" };
             var expectedData = new List<List<string>>()
             {
-                new List<string>() { "\r\n" },
+                new List<string>() { "a" },
             };
             var readerCsv = new StubIReadCsvFile() {
                 RawInputCsvListGet = () => testData
@@ -204,6 +204,20 @@ namespace ParserCSVFilesTests
             var expectedData = new List<List<string>>()
             {
                 new List<string>() { "\"a\"" },
+            };
+            var readerCsv = new StubIReadCsvFile() {
+                RawInputCsvListGet = () => testData
+            };
+            var parserCsv = new ParserCsv(readerCsv);
+            AreEqual(expectedData, parserCsv.ParsedCsvList);
+        }
+
+        [TestMethod]
+        public void ParseCsvList_TripleQuotedValueTest() {
+            var testData = new List<string>() { "\"\"\"" };
+            var expectedData = new List<List<string>>()
+            {
+                new List<string>() { "\"" },
             };
             var readerCsv = new StubIReadCsvFile() {
                 RawInputCsvListGet = () => testData

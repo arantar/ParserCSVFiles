@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace ParserCSVFiles
@@ -11,16 +12,23 @@ namespace ParserCSVFiles
 
         public List<string> RawInputCsvList { get; set; }
 
-        // метод для чтения CSV файлов. Пустые строки из файла пропускаются
+        // Метод для чтения CSV файлов. Пустые строки из файла пропускаются
         public List<string> ReadCsv(string path) {
             List<string> rawInputList = new List<string>();
-            using (StreamReader csvReader = new StreamReader(path)) {
-                string line;
-                while ((line = csvReader.ReadLine()) != null) {
-                    if (!string.IsNullOrEmpty(line)) {
-                        rawInputList.Add(line);
+            try {
+                using (StreamReader csvReader = new StreamReader(path)) {
+                    string line;
+                    while ((line = csvReader.ReadLine()) != null) {
+                        if (!string.IsNullOrEmpty(line)) {
+                            rawInputList.Add(line);
+                        }
                     }
                 }
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+                Console.ReadKey();
+                Environment.Exit(0);
             }
             return rawInputList;
         }

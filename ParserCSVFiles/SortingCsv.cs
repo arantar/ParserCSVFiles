@@ -6,7 +6,7 @@ namespace ParserCSVFiles
 {
     public static class SortingCsv
     {
-        // Метод для сортировки элементов внутри строки одной строки, содержащей распарсенные элементы CSV файла
+        // Вспомогательный метод для сортировки элементов внутри одной строки, содержащей распарсенные элементы CSV файла
         public static TSource SelectedOrDefault<TSource>(this IEnumerable<TSource> source, int sortingColumnIndex) {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
