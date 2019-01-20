@@ -24,7 +24,7 @@ namespace ParserCSVFiles
             return default(TSource);
         }
 
-        // Основной метод для сортировки CSV файла. 
+        // Основной метод для сортировки CSV файла. Все значения сортируются как строки
         public static List<List<string>> SortParsedCsvList(this List<List<string>> parsedCsvList, int index) {
             int max = parsedCsvList.Max(x => x.Count);
             return index <= max ? parsedCsvList.OrderBy(x => x.SelectedOrDefault(index)).ToList() : parsedCsvList;
