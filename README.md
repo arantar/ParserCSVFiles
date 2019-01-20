@@ -1,6 +1,6 @@
 ## ParserCSVFiles
 
-**Для запуска приложения выполнить:**
+**Для запуска приложения выполнить в cmd:**
 parsercsvfiles.exe /in="path" /sort=N
 
 **path** - путь к файлу с расширением .csv
