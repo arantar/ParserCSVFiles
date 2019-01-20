@@ -59,9 +59,10 @@ namespace ParserCSVFiles
 
         // Метод для валидации параметра сортировки на основе регулярного выражения
         private static bool ValidateArgSortOption(string sortOption, out Match match) {
-            match = Regex.Match(sortOption, @"(?<=\/(?i)sort=)(?<sort_line>\d+$)");
+            //match = Regex.Match(sortOption, @"(?<=\/(?i)sort=)(?<sort_line>\d+$)");
+            match = Regex.Match(sortOption, @"(?<=\/(?i)sort=)(?<sort_line>[1-9][0-9]*$)");
             if (!match.Success) {
-                return ShowTypeError("Введено неверное имя параметра. Необходимо /sort=[натуральное число] \r\nСортировка не будет выполнена.");
+                return ShowTypeError("Введено неверное имя параметра. Необходимо /sort=[натуральное число от 1] \r\nСортировка не будет выполнена.");
             }
             return true;
         }

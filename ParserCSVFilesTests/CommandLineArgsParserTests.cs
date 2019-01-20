@@ -30,6 +30,8 @@ namespace ParserCSVFilesTests
             Assert.IsNull(CommandLineArgsParser.SortOption);
             CommandLineArgsParser.SortOption = "/sort=";
             Assert.IsNull(CommandLineArgsParser.SortOption);
+            CommandLineArgsParser.SortOption = "/sort=0";
+            Assert.IsNull(CommandLineArgsParser.SortOption);
         }
     }
 }

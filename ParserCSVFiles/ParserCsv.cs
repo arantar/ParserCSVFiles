@@ -10,7 +10,7 @@ namespace ParserCSVFiles
             _rawInputList = _readFile.RawInputCsvList;
             ParsedCsvList = ParseCsvList(',');
             if (CommandLineArgsParser.SortOption != null) {
-                SortedParsedCsvList = ParsedCsvList.SortParsedCsvList(int.Parse(CommandLineArgsParser.SortOption));
+                SortedParsedCsvList = ParsedCsvList.SortParsedCsvList(int.Parse(CommandLineArgsParser.SortOption) - 1);
             }
         }
         // Переменная, содержащая в себе ссылку на объект ReadCsvFile, для реализации DI
